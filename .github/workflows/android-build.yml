@@ -24,6 +24,8 @@ jobs:
 
       - name: Fix ic_launcher_background.xml and generate missing assets
         run: |
+          mkdir -p app/src/main/res/drawable
+          python3 -c 'import base64; open("app/src/main/res/drawable/ic_launcher_background.xml","wb").write(base64.b64decode("PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHZlY3RvciB4bWxuczphbmRyb2lkPSJodHRwOi8vc2NoZW1hcy5hbmRyb2lkLmNvbS9hcGsvcmVzL2FuZHJvaWQiCiAgICBhbmRyb2lkOndpZHRoPSIxMDhkcCIKICAgIGFuZHJvaWQ6aGVpZ2h0PSIxMDhkcCIKICAgIGFuZHJvaWQ6dmlld3BvcnRXaWR0aD0iMTA4IgogICAgYW5kcm9pZDp2aWV3cG9ydEhlaWdodD0iMTA4Ij4KICAgIDxwYXRoCiAgICAgICAgYW5kcm9pZDpmaWxsQ29sb3I9IiMxMTE1MUEiCiAgICAgICAgYW5kcm9pZDpwYXRoRGF0YT0iTTAsMGgxMDh2MTA4aC0xMDh6IiAvPgo8L3ZlY3Rvcj4K"))'
           python3 -m pip install --upgrade pip pillow fonttools
           python3 - <<'EOF'
           import os
@@ -31,28 +33,10 @@ jobs:
           from fontTools.fontBuilder import FontBuilder
           from fontTools.pens.ttGlyphPen import TTGlyphPen
 
-          # 1. Fix drawable/ic_launcher_background.xml cleanly
-          os.makedirs("app/src/main/res/drawable", exist_ok=True)
-          bg_path = "app/src/main/res/drawable/ic_launcher_background.xml"
-          with open(bg_path, "w", encoding="utf-8") as f:
-              f.write("""<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <path
-        android:fillColor="#11151A"
-        android:pathData="M0,0h108v108h-108z" />
-</vector>
-""")
-
-          # 2. Create drawable/img_launcher_art.png if missing
           art_path = "app/src/main/res/drawable/img_launcher_art.png"
           if not os.path.exists(art_path):
               Image.new("RGBA", (512, 512), (17, 21, 26, 255)).save(art_path)
 
-          # 3. Create mipmap launcher icons if missing
           mipmap_dirs = [
               "app/src/main/res/mipmap-mdpi",
               "app/src/main/res/mipmap-hdpi",
@@ -67,7 +51,6 @@ jobs:
                   if not os.path.exists(p):
                       Image.new("RGBA", (192, 192), (30, 41, 59, 255)).save(p)
 
-          # 4. Create minimal valid TrueType (.ttf) fonts if missing
           font_dir = "app/src/main/res/font"
           os.makedirs(font_dir, exist_ok=True)
           font_names = [
