@@ -1,0 +1,23 @@
+import os
+from PIL import Image, ImageDraw
+
+os.makedirs("app/src/main/res/drawable", exist_ok=True)
+size = 512
+img = Image.new("RGBA", (size, size), (17, 21, 26, 255))
+d = ImageDraw.Draw(img)
+gold = (232, 194, 96, 255)
+
+# Rounded gold border
+d.rounded_rectangle([96, 96, 416, 416], radius=64, outline=gold, width=14)
+# Clapperboard body
+d.rounded_rectangle([156, 210, 356, 350], radius=18, outline=gold, width=10)
+d.line([156, 238, 356, 238], fill=gold, width=8)
+# Top angled clapper bar
+d.polygon([(154, 194), (344, 150), (352, 178), (162, 222)], outline=gold, width=8)
+# Audio waveform bars inside clapperboard
+bars = [18, 36, 22, 54, 30, 68, 34, 50, 20, 38, 16]
+for i, h in enumerate(bars):
+    x = 186 + i * 14
+    d.line([x, 294 - h // 2, x, 294 + h // 2], fill=gold, width=6)
+
+img.save("app/src/main/res/drawable/img_launcher_art.png")
