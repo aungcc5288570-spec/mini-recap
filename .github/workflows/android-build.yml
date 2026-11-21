@@ -20,6 +20,90 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Generate missing PNG and TTF assets
+        run: |
+          python3 -m pip install --upgrade pip pillow fonttools
+          python3 - <<'EOF'
+          import os
+          from PIL import Image
+          from fontTools.fontBuilder import FontBuilder
+          from fontTools.pens.ttGlyphPen import TTGlyphPen
+
+          # 1. Create drawable/img_launcher_art.png if missing
+          os.makedirs("app/src/main/res/drawable", exist_ok=True)
+          art_path = "app/src/main/res/drawable/img_launcher_art.png"
+          if not os.path.exists(art_path):
+              Image.new("RGBA", (512, 512), (17, 21, 26, 255)).save(art_path)
+
+          # 2. Create mipmap launcher icons if missing
+          mipmap_dirs = [
+              "app/src/main/res/mipmap-mdpi",
+              "app/src/main/res/mipmap-hdpi",
+              "app/src/main/res/mipmap-xhdpi",
+              "app/src/main/res/mipmap-xxhdpi",
+              "app/src/main/res/mipmap-xxxhdpi",
+          ]
+          for d in mipmap_dirs:
+              os.makedirs(d, exist_ok=True)
+              for name in ["ic_launcher.png", "ic_launcher_round.png"]:
+                  p = os.path.join(d, name)
+                  if not os.path.exists(p):
+                      Image.new("RGBA", (192, 192), (30, 41, 59, 255)).save(p)
+
+          # 3. Create minimal valid TrueType (.ttf) fonts if missing
+          font_dir = "app/src/main/res/font"
+          os.makedirs(font_dir, exist_ok=True)
+          font_names = [
+              "jetbrains_mono.ttf",
+              "noto_sans_myanmar.ttf",
+              "noto_serif_myanmar.ttf",
+              "padauk.ttf",
+              "plus_jakarta_sans.ttf",
+          ]
+
+          def make_minimal_ttf(out_path, family_name):
+              fb = FontBuilder(1000, isTTF=True)
+              glyph_order = [".notdef", "space"]
+              fb.setupGlyphOrder(glyph_order)
+
+              pen = TTGlyphPen(None)
+              pen.moveTo((100, 0))
+              pen.lineTo((100, 700))
+              pen.lineTo((500, 700))
+              pen.lineTo((500, 0))
+              pen.closePath()
+              notdef_glyph = pen.glyph()
+
+              space_pen = TTGlyphPen(None)
+              space_glyph = space_pen.glyph()
+
+              fb.setupGlyf({".notdef": notdef_glyph, "space": space_glyph})
+              fb.setupCharacterMap({32: "space"})
+              fb.setupHorizontalMetrics({
+                  ".notdef": (600, 100),
+                  "space": (400, 0),
+              })
+              fb.setupHorizontalHeader(ascent=800, descent=-200)
+              fb.setupNameTable({
+                  "familyName": family_name,
+                  "styleName": "Regular",
+              })
+              fb.setupOS2(
+                  sTypoAscender=800,
+                  sTypoDescender=-200,
+                  sTypoLineGap=100,
+                  usWinAscent=800,
+                  usWinDescent=200,
+              )
+              fb.setupPost()
+              fb.save(out_path)
+
+          for fname in font_names:
+              fpath = os.path.join(font_dir, fname)
+              if not os.path.exists(fpath):
+                  make_minimal_ttf(fpath, os.path.splitext(fname)[0])
+          EOF
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
