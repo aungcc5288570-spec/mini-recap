@@ -5,3 +5,216 @@ networkTimeout=10000
 validateDistributionUrl=true
 zipStoreBase=GRADLE_USER_HOME
 zipStorePath=wrapper/dists
+<resources>
+    <string name="app_name">Mini Recap</string>
+    <string name="header_badge">BURMESE RECAP</string>
+    <string name="header_subtitle">ဗီဒီယိုတိုများကို မြန်မာစကားပြေ Recap နှင့် .srt စာတန်းထိုးအဖြစ် ပြောင်းလဲပါ</string>
+
+    <string name="section_upload_step">၁</string>
+    <string name="section_upload_title">ဗီဒီယို ထည့်သွင်းရန်</string>
+    <string name="section_upload_subtitle">၃ မိနစ်အောက် ဗီဒီယိုဖိုင် ရွေးချယ်ပါ သို့မဟုတ် လင့်ခ်ထည့်ပါ</string>
+
+    <string name="tab_file_upload">ဗီဒီယိုဖိုင် ရွေးမယ်</string>
+    <string name="tab_url_input">ဗီဒီယိုလင့်ခ် ထည့်မယ်</string>
+
+    <string name="pick_video_title">စက်ထဲမှ ဗီဒီယိုတို ရွေးချယ်ပါ</string>
+    <string name="pick_video_hint">အများဆုံး ၃ မိနစ် (03:00) • ဗီဒီယိုကို စက်ထဲတွင်သာ ထားရှိပါသည်</string>
+    <string name="pick_video_button">ဗီဒီယို ရွေးချယ်မယ်</string>
+    <string name="change_video_button">ပြောင်းမယ်</string>
+    <string name="clear_video_cd">ရွေးချယ်ထားသော ဗီဒီယိုကို ဖယ်ရှားမယ်</string>
+    <string name="video_thumbnail_cd">ရွေးချယ်ထားသော ဗီဒီယို နမူနာပုံ</string>
+    <string name="on_device_privacy_note">ဗီဒီယိုဖိုင်ကို ဆာဗာပေါ်တွင် သိမ်းဆည်းခြင်း မရှိဘဲ စက်ထဲတွင်သာ စစ်ဆေးပါသည်</string>
+
+    <string name="url_input_label">ဗီဒီယို URL လင့်ခ်</string>
+    <string name="url_input_placeholder">https://example.com/short-video.mp4</string>
+    <string name="url_input_helper">တိုက်ရိုက် ဗီဒီယိုလင့်ခ် (http:// သို့မဟုတ် https://) ကို ကူးထည့်ပါ</string>
+    <string name="clear_url_cd">လင့်ခ် စာသား ရှင်းလင်းမယ်</string>
+
+    <string name="action_recap">Recap လုပ်မယ်</string>
+    <string name="action_recap_busy">Recap ပြုလုပ်နေသည်…</string>
+
+    <string name="section_processing_step">၂</string>
+    <string name="section_processing_title">စီစဉ်ဆောင်ရွက်ခြင်း</string>
+    <string name="section_processing_idle">ဗီဒီယိုထည့်ပြီး "Recap လုပ်မယ်" ကို နှိပ်ပါ</string>
+    <string name="section_processing_done">Recap နှင့် .srt စာတန်းထိုး ဖန်တီးပြီးပါပြီ</string>
+
+    <string name="stage_extracting">အသံနှင့် ဗီဒီယို အချက်အလက် စစ်ဆေးနေသည်…</string>
+    <string name="stage_transcribing">စကားသံများကို စာသားဖော်နေသည်…</string>
+    <string name="stage_writing">သဘာဝကျသော မြန်မာစကားပြေ Recap ရေးသားနေသည်…</string>
+    <string name="stage_subtitles">.srt စာတန်းထိုး အချိန်ကိုက် ဖန်တီးနေသည်…</string>
+
+    <string name="section_result_step">၃</string>
+    <string name="section_result_title">မြန်မာ Recap စာသားနှင့် .srt ရလဒ်</string>
+    <string name="result_empty_title">Recap စာသား ဤနေရာတွင် ပေါ်လာပါမည်</string>
+    <string name="result_empty_body">စကားပြေပုံစံ အပိုဒ်တို ၅ မှ ၈ ပိုဒ်နှင့် ဒေါင်းလုဒ်ဆွဲနိုင်သော .srt စာတန်းထိုးဖိုင်ကို ရရှိပါမည်။</string>
+
+    <string name="demo_notice_title">Demo Mode — API Key မထည့်သွင်းရသေးပါ</string>
+    <string name="demo_notice_body">Gemini သို့မဟုတ် Groq ဖြင့် ဗီဒီယိုအစစ်အမှန် Recap ပြုလုပ်ရန် Account → AI Provider &amp; Local Keys ထဲတွင် သင့် GEMINI_API_KEY သို့မဟုတ် GROQ_API_KEY ကို စက်ထဲ၌ သီးသန့်ထည့်သွင်းပါ။</string>
+    <string name="demo_notice_open_keys_btn">API Key Settings ဖွင့်မယ်</string>
+
+    <string name="action_copy_script">စာသား ကူးယူမယ်</string>
+    <string name="action_download_srt">.srt ဖိုင် ဒေါင်းလုဒ်ဆွဲမယ်</string>
+    <string name="action_toggle_srt_preview">.srt စာတန်းထိုး အကြိုကြည့်ရန်</string>
+    <string name="action_new_recap">နောက်တစ်ပုဒ် ထပ်လုပ်မယ်</string>
+
+    <string name="msg_copied">မြန်မာ Recap စာသားကို ကူးယူပြီးပါပြီ</string>
+    <string name="msg_srt_saved">စာတန်းထိုး .srt ဖိုင်ကို သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="msg_srt_save_failed">စာတန်းထိုးဖိုင် သိမ်းဆည်းရာတွင် အဆင်မပြေပါ။ ထပ်မံကြိုးစားကြည့်ပါ။</string>
+
+    <string name="err_no_input">ကျေးဇူးပြု၍ ၃ မိနစ်အောက် ဗီဒီယိုဖိုင် ရွေးချယ်ပါ သို့မဟုတ် ဗီဒီယိုလင့်ခ် ထည့်သွင်းပါ။</string>
+    <string name="err_invalid_url">ထည့်သွင်းထားသော ဗီဒီယိုလင့်ခ် ပုံစံ မမှန်ကန်ပါ။ http:// သို့မဟုတ် https:// ဖြင့် စတင်သော လင့်ခ်ကို ထည့်ပါ။</string>
+    <string name="err_video_too_long">ဗီဒီယိုသည် ၃ မိနစ် (%1$s) ထက် ကျော်လွန်နေပါသည်။ ၃ မိနစ်အောက် ဗီဒီယိုတိုကိုသာ ရွေးချယ်ပေးပါ။</string>
+    <string name="err_video_unreadable">ဗီဒီယိုဖိုင်ကို ဖတ်ရှု၍ မရပါ။ အခြား ဗီဒီယိုဖိုင်တစ်ခု ရွေးချယ်ကြည့်ပါ။</string>
+    <string name="err_processing_failed">စာသားဖော်ခြင်း မအောင်မြင်ပါ။ ခေတ္တစောင့်ပြီး ထပ်မံကြိုးစားပေးပါ။</string>
+
+    <string name="tts_section_title">အသံဖြင့် နားထောင်မယ် (Listen)</string>
+    <string name="tts_voice_selector_label">အသံရွေးချယ်ရန်</string>
+    <string name="voice_thiha_name">သီဟ (Thiha)</string>
+    <string name="voice_thiha_desc">အမျိုးသားအသံ</string>
+    <string name="voice_nila_name">နီလာ (Nila)</string>
+    <string name="voice_nila_desc">အမျိုးသမီးအသံ</string>
+    <string name="tts_listen_button">နားထောင်မယ် (Listen)</string>
+    <string name="tts_stop_button">အသံရပ်မယ် (Stop)</string>
+    <string name="tts_reading_progress">%1$s မှ အပိုဒ် %2$d / %3$d ဖတ်ပြနေသည်…</string>
+    <string name="tts_not_ready">စက်၏ အသံထွက်စနစ် (TTS) ပြင်ဆင်နေဆဲဖြစ်ပါသည်။ ခေတ္တစောင့်ပြီး ထပ်နှိပ်ပါ။</string>
+    <string name="tts_unavailable">စက်ထဲတွင် အသံထွက်စနစ် (Text-to-Speech) ကို ဖွင့်၍မရပါ။</string>
+    <string name="tts_no_myanmar_pack">စက်ထဲတွင် မြန်မာအသံထွက်ဒေတာ မရှိသေးသောကြောင့် ရရှိနိုင်သော စက်အသံဖြင့် ဖတ်ပြနေပါသည်။</string>
+
+    <string name="action_save_watchlist">Save to Watchlist</string>
+    <string name="action_saved_in_watchlist">Saved to Watchlist</string>
+    <string name="msg_watchlist_saved">Watchlist ထဲသို့ သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="msg_watchlist_already_saved">ဤ Recap ကို Watchlist ထဲတွင် သိမ်းဆည်းထားပြီးဖြစ်ပါသည်</string>
+    <string name="msg_watchlist_deleted">Watchlist မှ ဖယ်ရှားပြီးပါပြီ</string>
+    <string name="watchlist_button_label">Watchlist</string>
+    <string name="watchlist_section_step">★</string>
+    <string name="watchlist_section_title">သိမ်းဆည်းထားသော Watchlist မှတ်စုများ</string>
+    <string name="watchlist_sheet_subtitle">စက်ထဲတွင် သိမ်းဆည်းထားသော Recap ခေါင်းစဉ်၊ ရက်စွဲနှင့် အနှစ်ချုပ်များ</string>
+    <string name="watchlist_empty_title">သိမ်းဆည်းထားသော Movie Notes မရှိသေးပါ</string>
+    <string name="watchlist_empty_body">Recap ရလဒ်ထွက်လာသည့်အခါ "Save to Watchlist" ကို နှိပ်၍ စက်ထဲတွင် သိမ်းဆည်းထားနိုင်ပါသည်။</string>
+    <string name="watchlist_delete_cd">Watchlist မှ ဖျက်မယ်</string>
+    <string name="watchlist_copy_cd">မှတ်စု စာသား ကူးယူမယ်</string>
+    <string name="watchlist_close_cd">Watchlist ပိတ်မယ်</string>
+    <string name="watchlist_view_all">Watchlist ကြည့်ရန် (%1$d)</string>
+    <string name="watchlist_saved_on">သိမ်းဆည်းသည့်နေ့ • %1$s</string>
+    <string name="watchlist_read_note">အပြည့်အစုံ ဖတ်ရန်</string>
+    <string name="watchlist_collapse_note">ပြန်ခေါက်ရန်</string>
+
+    <string name="dashboard_ready_title_mm">ဖန်တီးဖို့အဆင်သင့်</string>
+    <string name="dashboard_ready_title_en">Ready to Create</string>
+    <string name="dashboard_ready_subtitle_mm">လိုအပ်သော AI Tool တစ်ခုကို ရွေးချယ်ပြီး ချက်ချင်းစတင်လိုက်ပါ</string>
+    <string name="dashboard_ready_subtitle_en">Choose a creative AI tool below to start producing</string>
+    <string name="dashboard_featured_badge">FEATURED</string>
+
+    <string name="server_1">Server 1</string>
+    <string name="server_2">Server 2</string>
+    <string name="server_3">Server 3</string>
+    <string name="server_status_online">Online</string>
+
+    <string name="nav_home">ပင်မ</string>
+    <string name="nav_tools">Tools</string>
+    <string name="nav_wallet">Wallet</string>
+    <string name="nav_projects">Projects</string>
+    <string name="nav_account">အကောင့်</string>
+
+    <string name="tab_text_input">စာသား / Script ထည့်မယ်</string>
+    <string name="text_input_label">စာသား သို့မဟုတ် သတင်း Link</string>
+    <string name="text_input_placeholder">ဇာတ်လမ်း Script၊ သတင်း Link သို့မဟုတ် အကြောင်းအရာကို ဤနေရာတွင် ထည့်သွင်းပါ…</string>
+    <string name="err_no_text_input">ကျေးဇူးပြု၍ စာသား သို့မဟုတ် Link တစ်ခုခု ထည့်သွင်းပေးပါ။</string>
+    <string name="back_to_dashboard">Dashboard သို့ ပြန်မယ်</string>
+    <string name="tool_workspace_back_en">Back to Tools</string>
+
+    <string name="wallet_title_mm">Studio Wallet &amp; Usage</string>
+    <string name="wallet_balance_label">ရရှိနိုင်သော AI Credits</string>
+    <string name="wallet_server_tier">Active Engine Node</string>
+    <string name="projects_subtitle_mm">သိမ်းဆည်းထားသော Watchlist Movie Notes နှင့် ဖန်တီးမှုမှတ်တမ်းများ</string>
+    <string name="account_subtitle_mm">Server၊ ဘာသာစကားနှင့် စက်တွင်းအသံချိန်ညှိမှုများ</string>
+    <string name="account_privacy_title">On-Device Privacy</string>
+    <string name="account_privacy_body">ဗီဒီယိုဖိုင်များနှင့် Watchlist မှတ်စုများကို သင့်စက်ထဲတွင်သာ လုံခြုံစွာ သိမ်းဆည်းထားပါသည်။</string>
+
+    <string name="tab_file_short">ဗီဒီယိုဖိုင်</string>
+    <string name="tab_url_short">URL လင့်ခ်</string>
+    <string name="tab_text_short">စာသား</string>
+
+    <!-- Audio-Video Sync & Muxing -->
+    <string name="sync_section_title">Audio-Video Sync Studio</string>
+    <string name="sync_section_subtitle">အသံ (Thiha/Nila) နှင့် .srt စာတန်းထိုးကို ဗီဒီယို Timeline နှင့် အချိန်ကိုက်ချိန်ညှိခြင်း</string>
+    <string name="sync_pacing_label">Duration / Pacing Mismatch Handling</string>
+    <string name="sync_pacing_fit">Fit Timeline</string>
+    <string name="sync_pacing_expand">Retime SRT</string>
+    <string name="sync_pacing_trim">Cap Overflow</string>
+    <string name="sync_ducking_title">Original Audio Ducking</string>
+    <string name="sync_ducking_subtitle">Voice-over ဝင်ချိန်တွင် မူရင်းဗီဒီယိုအသံကို ညင်သာစွာ လျှော့ချပေးမည်</string>
+    <string name="sync_duck_level_label">Ducked Original Level</string>
+    <string name="sync_voice_gain_label">Voice-Over Gain</string>
+    <string name="sync_offset_label">Timeline Sync Offset</string>
+    <string name="sync_include_subs_label">Embed SubRip Subtitle Track (.mp4)</string>
+    <string name="sync_prepare_voice_btn">Prepare Synced Voice</string>
+    <string name="sync_mux_video_btn">Mux Audio &amp; Subs (.mp4)</string>
+    <string name="sync_save_mp4_btn">Save Muxed Video (.mp4)</string>
+    <string name="sync_save_synced_srt_btn">Save Synced .srt</string>
+    <string name="sync_inspector_toggle">Timeline Segment Alignment (%1$d cues)</string>
+    <string name="sync_mux_no_video">MP4 Muxing ပြုလုပ်ရန် စက်ထဲမှ ဗီဒီယိုဖိုင် (File Mode) တစ်ခု ရွေးချယ်ထားရန် လိုအပ်ပါသည်။</string>
+    <string name="msg_mp4_saved">Audio-Video Sync MP4 ဗီဒီယိုကို သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="msg_mp4_save_failed">MP4 ဗီဒီယို သိမ်းဆည်းရာတွင် အဆင်မပြေပါ။</string>
+    <string name="msg_voice_sync_ready">Voice-over timeline aligned (%1$d segments)</string>
+    <string name="msg_mux_ready">Synced MP4 ဖန်တီးပြီးပါပြီ — Save နှိပ်၍ သိမ်းဆည်းနိုင်ပါပြီ</string>
+
+    <!-- Local-First API Key Storage -->
+    <string name="local_api_key_title">Local-First API Key Storage</string>
+    <string name="local_api_key_subtitle">API Key ကို ဤစက်ထဲတွင်သာ (MODE_PRIVATE) သီးသန့်သိမ်းဆည်းထားပြီး Cloud သို့ မပို့ပါ</string>
+    <string name="local_api_key_hint">Gemini API Key ထည့်သွင်းပါ (AIza…)</string>
+    <string name="local_api_key_save">Save Locally</string>
+    <string name="local_api_key_clear">Clear Local</string>
+    <string name="msg_api_key_saved">API Key ကို စက်ထဲတွင် လုံခြုံစွာ သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="msg_api_key_cleared">စက်တွင်း API Key ကို ဖယ်ရှားပြီးပါပြီ</string>
+
+    <!-- Video Timeline Editor -->
+    <string name="timeline_editor_title">Video Timeline Editor</string>
+    <string name="timeline_editor_subtitle">Clip ဖြတ်တောက်ခြင်း၊ Speed၊ Burmese Subtitle Style၊ Canvas နှင့် Crop</string>
+    <string name="timeline_editor_open_btn">Open Video Timeline Editor</string>
+    <string name="timeline_tab_clips">Clips</string>
+    <string name="timeline_tab_text">Text Style</string>
+    <string name="timeline_tab_canvas">Canvas</string>
+    <string name="timeline_tab_crop">Crop</string>
+    <string name="timeline_action_split">Split</string>
+    <string name="timeline_action_delete">Delete</string>
+    <string name="timeline_action_speed">Speed</string>
+    <string name="timeline_export_btn">Export MP4</string>
+    <string name="timeline_save_btn">Save MP4</string>
+    <string name="timeline_split_too_short">Playhead နေရာသည် Clip အစ/အဆုံးနှင့် နီးကပ်လွန်းနေပါသည်။</string>
+    <string name="timeline_delete_last_clip">နောက်ဆုံး Clip ၁ ခုကို ဖျက်၍မရပါ။</string>
+    <string name="timeline_export_no_video">Export ပြုလုပ်ရန် စက်ထဲမှ ဗီဒီယိုဖိုင် (File Mode) ရွေးချယ်ထားရန် လိုအပ်ပါသည်။</string>
+    <string name="timeline_export_done">Edited MP4 ဗီဒီယိုကို ဖန်တီးပြီးပါပြီ</string>
+
+    <!-- Multi-Provider AI & Groq Whisper Configuration -->
+    <string name="ai_provider_title">AI Provider &amp; Local Keys</string>
+    <string name="ai_provider_subtitle">GEMINI_API_KEY နှင့် GROQ_API_KEY များကို ဤစက်ထဲတွင်သာ (MODE_PRIVATE) သီးသန့်သိမ်းဆည်းပြီး Provider/Model ကို လွယ်ကူစွာ ပြောင်းလဲနိုင်ပါသည်</string>
+    <string name="ai_provider_gemini_label">Google Gemini</string>
+    <string name="ai_provider_groq_label">Groq (Whisper + LLM)</string>
+    <string name="ai_provider_gemini_hint">Gemini API Key ကူးထည့်ပါ (AIza…)</string>
+    <string name="ai_provider_groq_hint">Groq API Key ကူးထည့်ပါ (gsk_…)</string>
+    <string name="ai_groq_whisper_label">Whisper Transcription Model</string>
+    <string name="ai_groq_llm_label">Groq Recap / Script Model</string>
+    <string name="ai_gemini_model_label">Gemini Model</string>
+    <string name="ai_key_paste_cd">Paste API Key from Clipboard</string>
+    <string name="ai_key_saved_inline_gemini">✓ GEMINI_API_KEY ကို စက်ထဲတွင် (Private Storage) သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="ai_key_saved_inline_groq">✓ GROQ_API_KEY ကို စက်ထဲတွင် (Private Storage) သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="ai_key_cleared_inline">စက်တွင်း API Key ကို ရှင်းလင်းဖယ်ရှားပြီးပါပြီ</string>
+    <string name="ai_key_clipboard_empty">Clipboard ထဲတွင် API Key စာသား မတွေ့ပါ</string>
+    <string name="msg_groq_key_saved">Groq API Key ကို စက်ထဲတွင် သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="msg_groq_key_cleared">Groq API Key ကို ဖယ်ရှားပြီးပါပြီ</string>
+
+    <!-- Auto Disclaimer -->
+    <string name="disclaimer_title">Auto Disclaimer</string>
+    <string name="disclaimer_subtitle">Recap စာသား၊ .srt စာတန်းနှင့် Export MP4 ဗီဒီယိုများတွင် Copyright / Fair-Use Disclaimer အလိုအလျောက် ထည့်သွင်းရန်</string>
+    <string name="disclaimer_enable_label">Auto-include in Recaps, .srt &amp; Videos</string>
+    <string name="disclaimer_input_hint">Copyright / Fair-Use / Recap Disclaimer စာသား…</string>
+    <string name="disclaimer_reset_default">Reset Default</string>
+
+    <!-- Device Storage & Gallery Export Progress -->
+    <string name="save_to_gallery_btn">Save to Gallery</string>
+    <string name="save_to_files_btn">Save As…</string>
+    <string name="save_in_progress_label">Saving to Device Gallery…</string>
+    <string name="save_completed_gallery">Gallery (Movies/MiniRecap) သို့ သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="save_completed_files">Device Storage သို့ သိမ်းဆည်းပြီးပါပြီ</string>
+</resources>
